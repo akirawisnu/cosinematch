@@ -2,6 +2,6 @@ v 1
 d cosinematch Rapid fuzzy match, better than reclink
 d Wisnu Harto Adiwijoyo, Faculty of Economics Science, University of Goettingen
 d Distribution-Date: 20210914
-f readhtml/cosinematch.ado
-f readhtml/cosinematch.sthlp
-f readhtml/cosinematch_essential.ado
+f cosinematch/cosinematch.ado
+f cosinematch/cosinematch.sthlp
+f cosinematch/cosinematch_essential.ado
