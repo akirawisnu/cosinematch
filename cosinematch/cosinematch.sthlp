@@ -35,6 +35,12 @@ by transform them into sparse matrix based on TF-IDF. Thereafter, {cmd:cosinemat
 Chris van den Berg (2019) Cosine string matching, which utilize tf-idf to calculate cosine similarities 
 within a single list or between two lists of strings.{p_end}
 
+{pstd}
+In case the command is not working, probably due to Pandas incompatibility, 
+please refer to {cmd:cosinematch_essential} in order to fix the issue. This command will provide 
+only essential function of Cosine fuzzy match with no Pandas wrapper necessary. However, the data will only 
+provide essential matching variables (left_side, right_side, and similarity score). {p_end}
+
 
 {title:Options}
 
@@ -59,6 +65,27 @@ usingt (y) dataset that will be fuzzy match with using (x) file.
 {phang}
 {cmd:minscore(}{it:#}{cmd:)} specifies the matching scores (scaled 0-1)
 for the linked observations.
+
+{title:Example}
+
+{pstd}
+
+clear
+
+clear matrix
+
+set more off
+
+
+
+local x "https://github.com/akirawisnu/cosinematch/blob/main/cosinematch_sample_data/sbd_loc.dta?raw=true"
+
+local y "https://github.com/akirawisnu/cosinematch/blob/main/cosinematch_sample_data/sch_name.dta?raw=true"
+
+local var "sch_name"
+
+
+cosinematch , xdata("`x'") ydata("`y'") xvar("`var'") yvar("`var'") minscore(0.8)
 
 
 {title:Reference}
