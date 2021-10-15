@@ -8,6 +8,8 @@ syntax , XDAta(str) YDAta(str) XVar(str) YVar(str) [minscore(real 0.8)]
 clear
 python: mstr("`xdata'", "`ydata'", "`xvar'", "`yvar'", `minscore')
 
+cap destring similarity, replace
+
 end
 
 version 16.0	
