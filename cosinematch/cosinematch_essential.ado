@@ -30,8 +30,13 @@ def mstr(xdata,ydata,xvar,yvar,minscore):
     
     print("===============================================")
     print("Finished the work, with Average Similarity of: ")
-    print(pd.to_numeric(merge['similarity'], errors='coerce').mean())
-    print("--- %s seconds ---" % (time.time() - start_time))
+    print(str(pd.to_numeric(merge['similarity'], errors='coerce').mean()))
+    print("%s seconds ellapsed" % (time.time() - start_time))
+    print("Matching Minimum Score: " + str(minscore))
+    print("Number of observation in xdata: " + str(len(x.index)))
+    print("Number of observation in ydata: " + str(len(y.index)))
+    print("Perfect Match: " + str(len(merge[merge['similarity'] == "1.0"])))
+    print("Macthed observation: " + str(len(merge.index)))
     print("===============================================")
 	
     # Get total Obs
